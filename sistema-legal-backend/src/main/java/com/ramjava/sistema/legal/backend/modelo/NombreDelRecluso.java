@@ -1,0 +1,57 @@
+package com.ramjava.sistema.legal.backend.modelo;
+
+import jakarta.persistence.*;
+
+@Entity @Table(name = "prisionero")
+public class NombreDelRecluso {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(name = "nombredepila")
+    private String nombreDepila;
+    @Column(name = "apellido")
+    private String apellido;
+    @Column(name = "correoelectronico")
+    private String correoElectronico;
+
+    public NombreDelRecluso() {
+    }
+
+    public NombreDelRecluso(String nombreDepila, String apellido, String correoElectronico) {
+        this.nombreDepila = nombreDepila;
+        this.apellido = apellido;
+        this.correoElectronico = correoElectronico;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNombreDepila() {
+        return nombreDepila;
+    }
+
+    public void setNombreDepila(String nombreDepila) {
+        this.nombreDepila = nombreDepila;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+}
